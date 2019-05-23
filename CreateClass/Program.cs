@@ -11,8 +11,11 @@ namespace CreateClass
         static void Main(string[] args)
         {
             Room randomRoom = new Room(42);
-            Person potatoMan = new Employee(randomRoom, 10.05m, "Gardener", "János a krumpliember", DateTime.Now, "Male");
+            Employee potatoMan = new Employee(randomRoom, 10.05m, "Gardener", "János a krumpliember", DateTime.Now, "Male");
+            Employee poMan2 = (Employee)potatoMan.Clone();
+            poMan2.Room.Number = 112;
             Console.WriteLine(potatoMan.ToString());
+            Console.WriteLine(poMan2.ToString());
             Console.ReadKey();
         }
     }
