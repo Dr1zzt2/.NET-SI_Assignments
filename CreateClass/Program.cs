@@ -10,8 +10,8 @@ namespace CreateClass
     {
         static void Main(string[] args)
         {
-            Person potatoMan = new Employee(10.05m, "Gardener", "János a krumpliember", DateTime.Now, "Male");
             Room randomRoom = new Room(42);
+            Person potatoMan = new Employee(randomRoom, 10.05m, "Gardener", "János a krumpliember", DateTime.Now, "Male");
             Console.WriteLine(potatoMan.ToString());
             Console.ReadKey();
         }
