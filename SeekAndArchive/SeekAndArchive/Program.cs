@@ -12,6 +12,12 @@ namespace SeekAndArchive
         static void Main(string[] args)
         {
             string searchedName = args[0];
+            if (searchedName.Contains('.'))
+            {
+                string[] strings = searchedName.Split('.');
+                searchedName = strings[0];
+            }
+
             DirectoryInfo currentDirectory = new DirectoryInfo(args[1]);
             Searcher searcher = new Searcher();
             List<FileInfo> files = searcher.Search(currentDirectory, searchedName);

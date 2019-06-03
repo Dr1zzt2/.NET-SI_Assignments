@@ -15,7 +15,7 @@ namespace SeekAndArchive
         {
             foreach (FileInfo file in currentDirectory.GetFiles())
             {
-                if (searchedName == file.Name)
+                if (file.Name.Contains(searchedName))
                     files.Add(file);
             }
             foreach (DirectoryInfo dir in currentDirectory.GetDirectories())
