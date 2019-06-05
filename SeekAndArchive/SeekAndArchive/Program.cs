@@ -27,6 +27,7 @@ namespace SeekAndArchive
             {
                 Console.WriteLine(file.DirectoryName + "\\" + file.Name);
             }
+            WatcherHandler.AddWatcher(files);
             Console.ReadKey();
         }
     }
